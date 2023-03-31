@@ -3,14 +3,17 @@ from dinosaur import Dinosaur
 
 class Battlefield:
     def __init__(self) -> None:
-        self.robot = Robot()
-        self.dinosaur = Dinosaur()
+        self.robot = Robot('Ralphie')
+        self.dinosaur = Dinosaur('Louise', 10)
 
     def run_game(self):
         print('Run Game')
 
     def display_welcome(self):
-        print(" Welcome for Robot vs. Dinosaur")
+        print(" Welcome to Robot vs. Dinosaur")
+        print()
+        print(f" The robot is named {self.robot.name} and the dinosaur is named {self.dinosaur.name}")
+        print()
 
     def battle_phase(self):
         print(" In Battle phase")
@@ -18,7 +21,7 @@ class Battlefield:
     def display_winner(self):
         print( "Winner")
 
-        
+
 
 
 
