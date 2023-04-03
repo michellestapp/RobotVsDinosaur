@@ -23,26 +23,7 @@ class Battlefield:
         print(f" The robot is named {self.robot.name} and the dinosaur is named {self.dinosaur.name}")
         print()
         self.robot.choose_weapon(Weapon)
-        # self.weapon = Weapon('',0)
-        # print(f" Choose a weapon for robot {self.robot.name}:")
-        # print()
-        # print(" Press '1' for a Nerf Gun with an attack power of 10")
-        # print(" Press '2' for a Light Saber with an attack power of 35")
-        # weapon_choice = input(" Press '3' for a Candlestick with an attack power of 15: ")
-        # if weapon_choice == 1:
-        #     self.weapon.name = "Nerf Gun"
-        #     self.weapon.attack_power = 10
-        # elif weapon_choice == 2:
-        #     self.weapon.name = "Light Saber"
-        #     self.weapon.attack_power = 25
-        # else:
-        #     self.weapon.name = "Candlestick"
-        #     self.weapon.attack_power = 15
-        # self.weapon = Weapon(self.weapon.name, self.weapon.attack_power)
 
-        # print(f" You have chosen a {self.weapon.name} as your robot's weapon")
-        # print()
-        
 
     def battle_phase(self):
         print(" In Battle phase")
