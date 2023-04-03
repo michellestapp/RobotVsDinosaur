@@ -2,11 +2,12 @@ from robot import Robot
 from dinosaur import Dinosaur
 from weapon import Weapon
 
+
 class Battlefield:
     def __init__(self) -> None:
         self.robot = Robot('')
         self.dinosaur = Dinosaur('', 25)
-        self.weapon = Weapon('',0)
+
 
     def run_game(self):
         self.display_welcome()
@@ -23,6 +24,8 @@ class Battlefield:
         print(f" The robot is named {self.robot.name} and the dinosaur is named {self.dinosaur.name}")
         print()
         self.robot.choose_weapon(Weapon)
+   
+
 
 
     def battle_phase(self):
