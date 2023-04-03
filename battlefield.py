@@ -6,6 +6,7 @@ class Battlefield:
     def __init__(self) -> None:
         self.robot = Robot('')
         self.dinosaur = Dinosaur('', 25)
+        self.weapon = Weapon('',0)
 
     def run_game(self):
         self.display_welcome()
@@ -13,7 +14,7 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
-        weapon_choice = ''
+       
         print(" Welcome to Robot vs. Dinosaur")
         print()
         self.dinosaur.name = input(f" What is your dinosaur's name?")
@@ -21,6 +22,7 @@ class Battlefield:
         self.robot.name = input(f" What is your robot's name?")
         print(f" The robot is named {self.robot.name} and the dinosaur is named {self.dinosaur.name}")
         print()
+        self.robot.choose_weapon(Weapon)
         # self.weapon = Weapon('',0)
         # print(f" Choose a weapon for robot {self.robot.name}:")
         # print()
