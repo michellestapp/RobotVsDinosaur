@@ -18,13 +18,13 @@ class Battlefield:
        
         print(" Welcome to Robot vs. Dinosaur")
         print()
-        self.dinosaur.name = input(f" What is your dinosaur's name?")
+        self.dinosaur.name = input(f" Enter your dinosaur's name? ")
         print()
-        self.robot.name = input(f" What is your robot's name?")
+        self.robot.name = input(f" Enter your robot's name? ")
         print(f" The robot is named {self.robot.name} and the dinosaur is named {self.dinosaur.name}")
         print()
-        self.robot.choose_weapon(Weapon)
-   
+     #   self.robot.choose_weapon(Weapon)
+        self.robot.random_weapon(Weapon)
 
 
 

@@ -1,4 +1,5 @@
 from weapon import Weapon
+import random
 
 
 class Robot:
@@ -10,14 +11,33 @@ class Robot:
     
     def attack(self,dinosaur):
         print()
-        print (f"Robot {self.name} attacked Dinosaur {dinosaur.name}")
+        print (f" Robot {self.name} attacked Dinosaur {dinosaur.name}")
         dinosaur.health -= self.active_weapon.attack_power
         
         if dinosaur.health < 0:
             dinosaur.health = 0    
-        print(f"Dinosaur {dinosaur.name}'s health is now at {dinosaur.health}")
+        print(f" Dinosaur {dinosaur.name}'s health is now at {dinosaur.health}")
         print()
+
+    def random_weapon(self,Weapon):
+        nerf_gun = ('Nerf Gun', 10)
+        light_saber = ('Light Saber',35)
+        candlestick = ('Candlestick', 15)
+
+        weapons = [nerf_gun, light_saber, candlestick]
         
+        weapon_chosen = random.choice(weapons)
+
+        self.active_weapon.name = weapon_chosen[0]
+        self.active_weapon.attack_power = weapon_chosen[1]
+        print()
+        print(f" Your randomly selected weapon for robot {self.name} is a {self.active_weapon.name}")
+        print(f" The {self.active_weapon.name}'s attack power is {self.active_weapon.attack_power} points")
+        print()
+        self.weapon = Weapon(self.active_weapon.name,self.active_weapon.attack_power)
+        
+
+
     def choose_weapon(self,Weapon):
         print(f" Choose a weapon for robot {self.name}:")
         print()
