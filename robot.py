@@ -20,9 +20,9 @@ class Robot:
         print()
 
     def random_weapon(self,Weapon):
-        nerf_gun = ('Nerf Gun', 10)
-        light_saber = ('Light Saber',35)
-        candlestick = ('Candlestick', 15)
+        nerf_gun = Weapon('Nerf Gun', 10)
+        light_saber = Weapon('Light Saber',35)
+        candlestick = Weapon('Candlestick', 15)
 
         weapons = [nerf_gun, light_saber, candlestick]
         
@@ -34,7 +34,7 @@ class Robot:
         print(f" Your randomly selected weapon for robot {self.name} is a {self.active_weapon.name}")
         print(f" The {self.active_weapon.name}'s attack power is {self.active_weapon.attack_power} points")
         print()
-        self.weapon = Weapon(self.active_weapon.name,self.active_weapon.attack_power)
+ #       self.weapon = Weapon(self.active_weapon.name,self.active_weapon.attack_power)
         
 
 
