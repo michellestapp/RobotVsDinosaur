@@ -23,7 +23,6 @@ class Battlefield:
         self.robot.name = input(f" Enter your robot's name? ")
         print(f" The robot is named {self.robot.name} and the dinosaur is named {self.dinosaur.name}")
         print()
-     #   self.robot.choose_weapon(Weapon)
         self.robot.random_weapon(Weapon)
 
 
@@ -48,7 +47,7 @@ class Battlefield:
             
 
     def display_winner(self):
-        if self.dinosaur.health != 0:
+        if self.dinosaur.health >= 0:
             print(f" Dinosuar {self.dinosaur.name} won the game!")
         else:
             print(f" Robot {self.robot.name} won the game!")
